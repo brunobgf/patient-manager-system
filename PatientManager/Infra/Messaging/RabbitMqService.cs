@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using RabbitMQ.Client;
-using PatientManager.Application.Ports;
 using RabbitMQ.Client.Exceptions;
+using PatientManager.Domain.Ports;
 namespace PatientManager.Infra.Messaging
 {
     public class RabbitMqService : IRabbitMqService

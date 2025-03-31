@@ -5,7 +5,7 @@ VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientManager", "PatientManager.csproj", "{0E127C04-8526-26AF-7EFE-2C90A3412CAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientManagerTest", "..\PatientManagerTest\PatientManagerTest.csproj", "{9E0499F6-DBFC-45DE-BAF7-8D2EE8701296}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "patientManagerTest", "..\PatientManagerTest\patientManagerTest.csproj", "{9E0499F6-DBFC-45DE-BAF7-8D2EE8701296}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

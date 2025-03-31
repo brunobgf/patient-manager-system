@@ -1,4 +1,4 @@
-namespace PatientManager.Application.Ports
+namespace PatientManager.Domain.Ports
 {
     public interface IRabbitMqService
     {

@@ -1,4 +1,4 @@
-namespace PatientManager.Domain
+namespace PatientManager.Domain.Model
 {
     public class Patient
     {

@@ -1,10 +1,10 @@
 
 using Microsoft.EntityFrameworkCore;
-using PatientManager.Application.Ports;
-using PatientManager.Application.Services;
+using PatientManager.Domain.Ports;
+using PatientManager.Domain.Services;
+using PatientManager.Infra.Adapters;
 using PatientManager.Infra.Messaging;
 using PatientManager.Infra.Persistance;
-using PatientManager.Infraestructure.Persistance;
 using RabbitMQ.Client;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,7 +16,7 @@ builder.Services.AddSingleton<IConnectionFactory>(sp =>
     new ConnectionFactory() { HostName = "localhost" });
 
 builder.Services.AddScoped<IPatientRepository, PatientRepository>();
-builder.Services.AddScoped<IPatientService, PatientService>();
+builder.Services.AddScoped<IPatientUseCase, PatientService>();
 builder.Services.AddScoped<IRabbitMqService, RabbitMqService>();
 
 builder.Services.AddControllers();

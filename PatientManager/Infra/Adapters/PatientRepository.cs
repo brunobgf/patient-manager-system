@@ -1,8 +1,8 @@
-﻿using PatientManager.Application.Ports;
-using PatientManager.Domain;
-using PatientManager.Infraestructure.Persistance;
+﻿using PatientManager.Domain.Model;
+using PatientManager.Domain.Ports;
+using PatientManager.Infra.Persistance;
 
-namespace PatientManager.Infra.Persistance
+namespace PatientManager.Infra.Adapters
 {
     public class PatientRepository : IPatientRepository
     {

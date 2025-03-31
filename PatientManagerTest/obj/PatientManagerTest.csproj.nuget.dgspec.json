@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\patient-manager-system\\PatientManagerTest\\PatientManagerTest.csproj": {}
+    "C:\\dev\\patient-manager-system\\PatientManagerTest\\patientManagerTest.csproj": {}
   },
   "projects": {
-    "C:\\dev\\patient-manager-system\\PatientManagerTest\\PatientManagerTest.csproj": {
+    "C:\\dev\\patient-manager-system\\PatientManagerTest\\patientManagerTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\patient-manager-system\\PatientManagerTest\\PatientManagerTest.csproj",
-        "projectName": "PatientManagerTest",
-        "projectPath": "C:\\dev\\patient-manager-system\\PatientManagerTest\\PatientManagerTest.csproj",
+        "projectUniqueName": "C:\\dev\\patient-manager-system\\PatientManagerTest\\patientManagerTest.csproj",
+        "projectName": "patientManagerTest",
+        "projectPath": "C:\\dev\\patient-manager-system\\PatientManagerTest\\patientManagerTest.csproj",
         "packagesPath": "C:\\Users\\bruno\\.nuget\\packages\\",
         "outputPath": "C:\\dev\\patient-manager-system\\PatientManagerTest\\obj\\",
         "projectStyle": "PackageReference",

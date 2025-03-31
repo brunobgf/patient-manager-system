@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PatientManager.Domain;
 using PatientManager.Infra.Persistance;
-using PatientManager.Infraestructure.Persistance;
 using Assert = Xunit.Assert;
 
 namespace PatientManagerTests

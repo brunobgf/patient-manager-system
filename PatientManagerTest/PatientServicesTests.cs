@@ -1,12 +1,12 @@
 ﻿using Moq;
-using PatientManager.Application.Ports;
-using PatientManager.Application.Services;
-using PatientManager.Domain;
+using PatientManager.Domain.Model;
+using PatientManager.Domain.Ports;
+using PatientManager.Domain.Services;
 
 namespace PatientManagerTest
 {
 
-    public class PatientServicesTests
+    public class PatientUseCasesTests
     {
         [Fact]
         public void RegisterPatient_ShouldSendNotification()
@@ -15,7 +15,7 @@ namespace PatientManagerTest
 
             var mockRabbitMq = new Mock<IRabbitMqService>();
 
-            var service = new PatientService(mockRepo.Object, mockRabbitMq.Object);
+            var service = new PatientUseCase(mockRepo.Object, mockRabbitMq.Object);
             var patient = new Patient { Name = "John Doe", Age = 30, Weight = 80, Height = 1.80 };
 
             service.RegisterPatient(patient);
@@ -31,7 +31,7 @@ namespace PatientManagerTest
         {
             var mockRepo = new Mock<IPatientRepository>();
             var mockRabbitMq = new Mock<IRabbitMqService>();
-            var service = new PatientService(mockRepo.Object, mockRabbitMq.Object);
+            var service = new PatientUseCase(mockRepo.Object, mockRabbitMq.Object);
             var patient = new Patient { Name = "John Doe", Age = 30, Weight = 80, Height = 1.80 };
 
             mockRepo.Setup(r => r.Add(It.IsAny<Patient>())).Throws(new Exception("Repository error"));
@@ -45,7 +45,7 @@ namespace PatientManagerTest
         {
             var mockRepo = new Mock<IPatientRepository>();
             var mockRabbitMq = new Mock<IRabbitMqService>();
-            var service = new PatientService(mockRepo.Object, mockRabbitMq.Object);
+            var service = new PatientUseCase(mockRepo.Object, mockRabbitMq.Object);
             var patient = new Patient { Name = "John Doe", Age = 30, Weight = 80, Height = 1.80 };
 
             mockRepo.Setup(r => r.GetById(It.IsAny<int>())).Returns(patient);
@@ -60,7 +60,7 @@ namespace PatientManagerTest
         {
             var mockRepo = new Mock<IPatientRepository>();
             var mockRabbitMq = new Mock<IRabbitMqService>();
-            var service = new PatientService(mockRepo.Object, mockRabbitMq.Object);
+            var service = new PatientUseCase(mockRepo.Object, mockRabbitMq.Object);
 
             mockRepo.Setup(r => r.GetById(It.IsAny<int>())).Returns(value: null as Patient);
 

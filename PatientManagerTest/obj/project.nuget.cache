@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fckrEBPyaRA=",
+  "dgSpecHash": "HYNl7HXHvyA=",
   "success": true,
-  "projectFilePath": "C:\\dev\\patient-manager-system\\PatientManagerTest\\PatientManagerTest.csproj",
+  "projectFilePath": "C:\\dev\\patient-manager-system\\PatientManagerTest\\patientManagerTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bruno\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\bruno\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",

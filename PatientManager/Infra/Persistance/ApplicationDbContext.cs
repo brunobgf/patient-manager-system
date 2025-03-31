@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PatientManager.Domain;
+using PatientManager.Domain.Model;
 
-namespace PatientManager.Infraestructure.Persistance
+namespace PatientManager.Infra.Persistance
 {
     public class ApplicationDbContext : DbContext
     {

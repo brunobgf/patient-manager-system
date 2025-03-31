@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PatientManager.Application.Ports;
-using PatientManager.Domain;
+using PatientManager.Domain.Model;
+using PatientManager.Domain.Ports;
 
-namespace PatientManager.Presentation
+namespace PatientManager.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

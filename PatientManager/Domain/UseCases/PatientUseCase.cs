@@ -1,15 +1,14 @@
-using PatientManager;
-using PatientManager.Application.Ports;
-using PatientManager.Domain;
+using PatientManager.Domain.Model;
+using PatientManager.Domain.Ports;
 
-namespace PatientManager.Application.Services
+namespace PatientManager.Domain.Services
 {
-    public class PatientService : IPatientService
+    public class PatientUseCase : IPatientUseCase
     {
         private readonly IPatientRepository _patientRepository;
         private readonly IRabbitMqService _rabbitMqService;
 
-        public PatientService(IPatientRepository repository, IRabbitMqService rabbitMqService)
+        public PatientUseCase(IPatientRepository repository, IRabbitMqService rabbitMqService)
         {
             _patientRepository = repository;
             _rabbitMqService = rabbitMqService;
