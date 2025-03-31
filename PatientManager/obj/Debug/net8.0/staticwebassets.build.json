@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "t8+zO5gi6CGrSKfcU0ypYPm33Mn90LzsTz68Yqujyjc=",
+  "Source": "PatientManager",
+  "BasePath": "_content/PatientManager",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
