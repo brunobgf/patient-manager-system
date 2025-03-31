@@ -1,28 +1,29 @@
 ﻿using System.Text;
-using System.Threading.Channels;
-using PatientManager.Application.Ports;
 using RabbitMQ.Client;
+using System.Threading.Tasks;
+using PatientManager.Application.Ports;
 
 namespace PatientManager.Infra.Messaging
 {
     public class RabbitMqService : IRabbitMqService
     {
-        private readonly IConnectionFactory _connectionFactory;
+        private readonly IConnectionFactory _factory;
 
-        public RabbitMqService(IConnectionFactory connectionFactory)
+        public RabbitMqService(IConnectionFactory factory)
         {
-            _connectionFactory = connectionFactory;
+            _factory = factory;
         }
 
         public async Task SendMessage(string message)
         {
-            var connection =  await _connectionFactory.CreateConnectionAsync();
-            using var channel = await connection.CreateChannelAsync();
-            await channel.QueueDeclareAsync(queue: "patient_notifications", durable: false, exclusive: false, autoDelete: false, arguments: null).ConfigureAwait(false);
-
+            await using var connection = await _factory.CreateConnectionAsync();
+            await using var channel = await connection.CreateChannelAsync();
+            await channel.QueueDeclareAsync(queue: "patient_notifications", durable: false, exclusive: false, autoDelete: false, arguments: null);
             var body = Encoding.UTF8.GetBytes(message);
 
-            await channel.BasicPublishAsync(exchange: "", routingKey: "patient_notifications", body: body);
+      
+           await channel.BasicPublishAsync(exchange: "", routingKey: "patient_notifications", body: body);
+         
         }
     }
 }

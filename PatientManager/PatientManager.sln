@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientManager", "PatientManager.csproj", "{0E127C04-8526-26AF-7EFE-2C90A3412CAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientManagerTest", "..\PatientManagerTest\PatientManagerTest.csproj", "{9E0499F6-DBFC-45DE-BAF7-8D2EE8701296}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{0E127C04-8526-26AF-7EFE-2C90A3412CAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E127C04-8526-26AF-7EFE-2C90A3412CAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E127C04-8526-26AF-7EFE-2C90A3412CAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E0499F6-DBFC-45DE-BAF7-8D2EE8701296}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E0499F6-DBFC-45DE-BAF7-8D2EE8701296}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E0499F6-DBFC-45DE-BAF7-8D2EE8701296}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E0499F6-DBFC-45DE-BAF7-8D2EE8701296}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
